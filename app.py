@@ -2,17 +2,15 @@
 # Imports
 # ----------------------------------------------------------------------------#
 
-import re
+import re, babel, logging
 import dateutil.parser
-import babel
 from flask import Flask, render_template, request, flash, redirect, url_for, abort
 from flask_moment import Moment
-import logging
 from logging import Formatter, FileHandler
 from forms import *
 from datetime import datetime
 from operator import itemgetter
-from models import db, Venue, Show, Artist, Genre, artist_genre, venue_genre
+from models import db, Venue, Show, Artist, Genre
 
 # ----------------------------------------------------------------------------#
 # App Config.
